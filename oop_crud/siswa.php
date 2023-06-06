@@ -14,13 +14,11 @@ class Siswa {
         $query = "SELECT * FROM siswa";
         $stmt = $this->db->query($query);
 
+        $result = array();
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "ID: " . $row['id'] . "<br>";
-            echo "Nama: " . $row['nama'] . "<br>";
-            echo "Kelas: " . $row['kelas'] . "<br>";
-            echo "====================<br>";
+            $result[] = $row;
         }
+
+        return $result;
     }
 }
-$siswa = new Siswa();
-$siswa -> ShowAll();

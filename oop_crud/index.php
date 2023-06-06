@@ -1,3 +1,8 @@
+<?php
+require_once 'siswa.php';
+$siswa = new Siswa();
+$dataSiswa = $siswa->ShowAll();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,5 +36,26 @@
             </tr>
         </table>
     </form>
+
+<hr>
+<h2>Data Siswa</h2>
+<table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nama</th>
+                <th>Kelas</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($dataSiswa as $siswa) : ?>
+                <tr>
+                    <td><?php echo $siswa['nis']; ?></td>
+                    <td><?php echo $siswa['nama']; ?></td>
+                    <td><?php echo $siswa['kelas']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+</table>
 </body>
 </html>
