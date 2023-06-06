@@ -21,4 +21,11 @@ class Siswa {
 
         return $result;
     }
+    public function InsertData($nis, $nama, $kelas) {
+        $query = "INSERT INTO siswa (nis, nama, kelas) VALUES (?, ?, ?)";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute([$nis, $nama, $kelas]);
+
+        return $stmt->rowCount();
+    }
 }

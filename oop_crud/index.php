@@ -12,7 +12,7 @@ $dataSiswa = $siswa->ShowAll();
     <title>CRUD OOP PHP</title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="insertData.php" method="post">
         <table>
             <tr>
                 <td>NIS</td>
