@@ -1,10 +1,10 @@
 <?php
 
 class Database {
-    private $host = 'localhost'; // Ganti sesuai dengan host database Anda
-    private $dbName = 'oop_crud'; // Ganti sesuai dengan nama database Anda
-    private $username = 'root'; // Ganti dengan username database Anda
-    private $password = ''; // Ganti dengan password database Anda
+    private $host = 'localhost'; //   host database
+    private $dbName = 'oop_crud'; //  nama database
+    private $username = 'root'; //  username database
+    private $password = ''; //  password database
     private $pdo;
 
     public function __construct() {
